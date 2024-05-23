@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+
+section {
+
+
+
+  margin: 0 7%;
+}
+
+
 body {
   background-color: #ece3d4;
 
@@ -54,8 +63,7 @@ nav {
   flex-direction: column;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
 }
 
 nav h1 {
@@ -66,12 +74,13 @@ nav h1 {
   font-style: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding-bottom: 20px;
+  text-align: center;
 }
 
 nav p {
   font-size: 40px;
   color: rgb(0, 0, 0);
-
+  text-align: center;
   font-family: "Ubuntu Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -86,6 +95,16 @@ nav section {
   width: 100%;
 }
 
+
+
+
+
+
+
+
+
+
+
 .saudacao {
   height: 260px;
   display: flex;
@@ -95,8 +114,9 @@ nav section {
   justify-content: space-evenly;
   font-weight: 600;
   align-items: center;
+  text-align: center;
   padding: 55px 45px;
-  margin: 95px 90px 80px 90px;
+  margin: 95px 0px 80px 0px;
   line-height: 3rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(50, 50, 93, 0.25) 0px -6px 12px -2px;
@@ -136,7 +156,7 @@ nav section {
 .cards {
   padding: 20px 0 20px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   
 }
@@ -157,7 +177,7 @@ nav section {
 
 .card {
   aspect-ratio: 3/2;
-  border: 2px solid #696969;
+  border: 1px solid #696969;
   background-color: #f1faf8;
   position: relative;
   transition: transform 0.15s ease;
@@ -175,7 +195,7 @@ border-radius: 4px;
   position: absolute;
   height: 100%;
   width: 100%;
-  border: 2px solid #696969;
+  border: 2px solid #bebebe;
   background-color: #f1faf8;
   transform-origin: center center;
   z-index: -1;
@@ -199,7 +219,7 @@ border-radius: 4px;
 
 .text-card-border {
   width: 100%;
-  border: 2px solid #696969;
+  border: 1px solid #696969;
   background-color: #eee;
   aspect-ratio: 1/1;
   position: relative;
@@ -213,7 +233,7 @@ border-radius: 4px;
 
   font-family: "Caveat", cursive;
   font-optical-sizing: auto;
-
+text-align: center;
   font-style: normal;
 }
 
@@ -241,7 +261,8 @@ border-radius: 4px;
 
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  
 }
 
 .image-example{
@@ -250,7 +271,146 @@ border-radius: 4px;
   height: 300px;
 border-radius: 8px;
   border: 1px solid #69696993;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+  rgba(50, 50, 93, 0.25) 0px -6px 12px -2px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card__contain {
+  --surface-color: #fff;
+  --curve: 8;
+}
+
+
+
+
+
+.cards2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+  padding: 0;
+  list-style-type: none;
+  
+}
+
+.card2 {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+  rgba(50, 50, 93, 0.25) 0px -6px 12px -2px;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+  rgba(50, 50, 93, 0.25) 0px -6px 12px -2px;
+}
+
+.card2:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card2:hover .card__header {
+  transform: translateY(0);
+}
+
+
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
+
+
+
+
+
+
+
+
 
 
 
