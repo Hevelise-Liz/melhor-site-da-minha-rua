@@ -41,6 +41,7 @@ nav {
   position: relative;
   border-radius: 3px;
   padding: 10px 20px 10px 20px;
+  margin-top: 30px;
   background: linear-gradient(
     to right,
     #f0f0f068 0%,
@@ -97,7 +98,7 @@ menu {
     #f0f0f0 100%
   );
 
-  width: 99.4vw;
+  width: 100vw;
   padding: 1.5em 1em 0.8em 0;
   position: fixed;
   top: 0;
@@ -135,13 +136,10 @@ menu ul li a {
 menu ul li a:hover {
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
   color: #fff;
-
 }
 
-
-
 .saudacao {
-  height: 8.6em;
+  height: auto;
   display: flex;
   font-size: 1.6em;
   flex-direction: column;
@@ -150,7 +148,7 @@ menu ul li a:hover {
   font-weight: 500;
   align-items: center;
   text-align: center;
-  padding: 1em 2em;
+  padding: 1.6em 2em;
   margin: 80px 0px;
   line-height: 3rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -210,7 +208,6 @@ menu ul li a:hover {
 }
 
 .card {
-  aspect-ratio: 3/2;
   border: 1px solid #696969;
   background-color: #f1faf8;
   position: relative;
@@ -436,7 +433,7 @@ footer {
   height: 320px;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
   align-items: center;
   background-image: url("assets/praiab.png");
   background-size: cover;
@@ -444,6 +441,7 @@ footer {
 }
 
 footer p {
+  font-size: 20px;
   width: 98.7vw;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -486,7 +484,7 @@ footer .footer__contact {
 }
 
 .logo {
-  width: 25px;
+  width: 30px;
 }
 
 ::-webkit-scrollbar {
@@ -504,4 +502,14 @@ footer .footer__contact {
 
 ::-webkit-scrollbar-track {
   background-color: #fff;
+}
+
+.fim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: -43px;
+  font-family: "Mate SC", serif;
 }
