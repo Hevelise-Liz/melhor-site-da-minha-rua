@@ -10,7 +10,6 @@ section {
 
 body {
   background-color: #ece3d4;
-
   background: linear-gradient(
     to bottom,
     #ece3d484,
@@ -40,15 +39,15 @@ header {
 nav {
   position: relative;
   border-radius: 3px;
-  padding: 10px 20px 10px 20px;
-  margin-top: 30px;
+  padding: 20px 45px 10px 45px;
+  margin-top: 50px;
   background: linear-gradient(
     to right,
-    #f0f0f068 0%,
-    #eeeeeedb 25%,
+    #f0f0f024 0%,
+    #eeeeee 25%,
     #ffe4e1b0 50%,
     #eee 75%,
-    #f0f0f068 100%
+    #f0f0f03f 100%
   );
 
   width: 99.4vw;
@@ -60,7 +59,7 @@ nav {
 }
 
 nav h1 {
-  font-size: 4em;
+  font-size: 3.5rem;
   color: rgb(0, 0, 0);
   font-family: "Mate SC", serif;
   font-weight: 900;
@@ -103,7 +102,6 @@ menu {
   position: fixed;
   top: 0;
   z-index: 10;
-
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(50, 50, 93, 0.25) 0px -6px 12px -2px;
 }
@@ -148,14 +146,12 @@ menu ul li a:hover {
   font-weight: 500;
   align-items: center;
   text-align: center;
-  padding: 1.6em 2em;
+  padding: 2em;
   margin: 80px 0px;
-  line-height: 3rem;
+  line-height: 2.5rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(50, 50, 93, 0.25) 0px -6px 12px -2px;
-
   border-radius: 8px;
-
   background-color: #eee;
   background-image: url("assets/marmor.png");
   background-size: cover;
@@ -166,7 +162,6 @@ menu ul li a:hover {
   text-decoration: none;
   padding-left: 5px;
   position: relative;
-
   z-index: 1;
 }
 
@@ -196,6 +191,7 @@ menu ul li a:hover {
 .stack {
   width: 28%;
 
+  flex-wrap: wrap;
   transition: transform 0.25s ease;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(50, 50, 93, 0.25) 0px -6px 12px -2px;
@@ -213,8 +209,7 @@ menu ul li a:hover {
   position: relative;
   transition: transform 0.15s ease;
   border-radius: 4px;
-  padding: 5% 5% 5% 5%;
-
+  padding: 5%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(50, 50, 93, 0.25) 0px -6px 12px -2px;
 }
@@ -282,6 +277,7 @@ menu ul li a:hover {
 
 .image-example-contain {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -385,7 +381,6 @@ menu ul li a:hover {
   margin: 1em 0;
   font-weight: 700;
   font-size: 1em;
-
   text-shadow: 0 0 5px #ff00dd3a, 0 0 15px #ffa60090, 0 0 20px #ffa500,
     0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
 }
@@ -393,9 +388,7 @@ menu ul li a:hover {
 .card__description {
   padding: 0 2rem 1.5rem 2rem;
   margin: 0;
-
   font-size: 17px;
-
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
@@ -406,7 +399,6 @@ menu ul li a:hover {
   text-decoration: none;
   font-weight: bold;
   position: relative;
-
   z-index: 1;
 }
 
@@ -430,7 +422,7 @@ footer {
   font-size: 24px;
   font-weight: 700;
   display: flex;
-  height: 320px;
+  height: 300px;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 25px;
@@ -445,6 +437,7 @@ footer p {
   width: 98.7vw;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 10px;
 }
 
 footer .footer__contact {
@@ -506,10 +499,211 @@ footer .footer__contact {
 
 .fim {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 70px;
+  margin-bottom: -70px;
+  color: #ece3d4;
+  font-family: "Kalam", cursive;
   font-weight: 700;
-  margin-bottom: -43px;
-  font-family: "Mate SC", serif;
+  z-index: -10 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 1328px) {
+  .card__image {
+    height: 80%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 1043px) {
+  .text-card-border p {
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  .icon-card {
+    width: 20px;
+    height: 20px;
+  }
+
+  .saudacao {
+    font-size: 1.3em;
+    line-height: 1.8;
+    margin: 50px 0px;
+  }
+
+  nav h1 {
+    font-size: 3rem;
+  }
+
+  nav p {
+    font-size: 1.6em;
+  }
+
+  menu ul li {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 897px) {
+  nav h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .image-example {
+    height: 210px;
+  }
+}
+
+@media only screen and (max-width: 721px) {
+  .cards {
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+  }
+
+  .text-card-border p {
+    padding: 20px;
+  }
+
+  .card {
+    padding: 4%;
+  }
+
+  .stack {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .cards2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card2 {
+    width: 90%;
+    margin-left: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .image-example {
+    height: 170px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .image-example-contain {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .image-example {
+    height: 200px;
+    width: 80%;
+  }
+
+  .cards2 li {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card2 {
+    width: 80%;
+    margin: 0;
+  }
+
+  section {
+    margin: 0 12%;
+  }
+
+  .saudacao {
+    line-height: 1.5;
+    padding: 1em 1.5em;
+  }
+
+  .saudacao a {
+    line-height: 1.5;
+  }
+
+  menu ul {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  menu ul li {
+    font-size: 16px;
+    margin-left: 7px;
+    font-weight: 500;
+  }
+
+  menu {
+    padding: 0.8em 0.5em 0.5em 0.5em;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  .text-card-border p {
+    padding: 10px;
+  }
+
+  nav h1 {
+    font-size: 2rem;
+  }
+
+  nav p {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+  }
+
+  .card__header {
+    padding: 1em 1em 0 1em;
+  }
+
+  .card__description {
+    padding: 0 1em 1em 1em;
+  }
+
+  menu ul li {
+    font-size: 14px;
+    margin-left: 7px;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  menu ul {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    line-height: 0.6;
+
+    align-items: end !important;
+  }
+}
+@media only screen and (max-width: 287px) {
+  .card__header h3 {
+    font-size: 0.9em;
+  }
+
+  .card__description {
+    padding: 0 1em 1em 1em;
+  }
+  .card__tagline {
+    margin: 0.8em 0;
+  }
 }
